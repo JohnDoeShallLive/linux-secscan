@@ -7,7 +7,7 @@ A collection of scripts for performing various security audits on Linux systems.
 
 A comprehensive, lightweight, and dependency-free Linux security auditing CLI tool designed to identify security misconfigurations, suspicious activity, and weak configurations across Linux systems.
 
-## 🎯 Features
+## Features
 
 - **SSH Security Audit**: Check SSH configuration for insecure settings (root login, weak authentication)
 - **Login Attempt Analysis**: Detect brute force attacks and suspicious login patterns
@@ -21,14 +21,14 @@ A comprehensive, lightweight, and dependency-free Linux security auditing CLI to
 - **JSON Export**: Export results in JSON format for automation
 - **Report Generation**: Save detailed reports to file
 
-## 📋 Requirements
+## Requirements
 
 - **Python 3.6+**
 - **Linux Distribution**: Ubuntu, Debian, CentOS, Fedora, Kali, Arch, or any systemd-based Linux
 - **Root Privileges**: Required for comprehensive security checks
 - **No External Dependencies**: Pure Python implementation (uses only stdlib)
 
-## 🚀 Installation
+## Installation
 
 ### Method 1: Direct Installation from Repository
 
@@ -56,7 +56,7 @@ sudo python3 setup.py install
 sudo secscan --full
 ```
 
-## 📖 Usage
+## Usage
 
 ### Basic Commands
 
@@ -89,7 +89,7 @@ sudo python3 -m secscan.main --full --output security_report.txt
 sudo python3 -m secscan.main --full --json --output report.json
 ```
 
-## 📊 Example Output
+## Example Output
 
 ```
 =====================================
@@ -97,12 +97,12 @@ sudo python3 -m secscan.main --full --json --output report.json
 =====================================
 
 [SSH Configuration]
-Root Login: no ✓
-Password Authentication: no ✓
-Public Key Authentication: yes ✓
-Empty Passwords: no ✓
-SSH Port: 22 ⚠
-Protocol Version: 2 ✓
+Root Login: no
+Password Authentication: no
+Public Key Authentication: yes
+Empty Passwords: no
+SSH Port: 22
+Protocol Version: 2
 
 [Login Attempt Analysis]
 Failed Login Attempts: 32
@@ -122,7 +122,7 @@ World Writable Files: 3
 SUID Binaries: 28
 
 [Firewall & Network Audit]
-Firewall Status: ACTIVE ✓
+Firewall Status: ACTIVE
 UFW: Active
 Open Ports: 3
 
@@ -136,10 +136,10 @@ Total Running Services: 45
 Risky Services Detected: 0
 
 [System Hardening]
-Fail2Ban: Installed ✓
-auditd: Installed ✓
-SELinux: Enabled ✓
-Automatic Updates: Enabled ✓
+Fail2Ban: Installed
+auditd: Installed
+SELinux: Enabled
+Automatic Updates: Enabled
 Cron Jobs: 12 jobs
 
 ============================================================
@@ -159,18 +159,18 @@ Breakdown:
 ============================================================
 [RECOMMENDATIONS]
 ============================================================
-  • Change SSH port from default 22 to non-standard port
-  • Implement rate limiting for SSH access
-  • Consider enabling stricter firewall rules for inbound traffic
-  • Review and minimize installed services
-  • Enable additional monitoring services for better detection
+  - Change SSH port from default 22 to non-standard port
+  - Implement rate limiting for SSH access
+  - Consider enabling stricter firewall rules for inbound traffic
+  - Review and minimize installed services
+  - Enable additional monitoring services for better detection
 
 ============================================================
 End of Report
 ============================================================
 ```
 
-## 🔧 Project Structure
+## Project Structure
 
 ```
 linux-sec-audit/
@@ -195,50 +195,50 @@ linux-sec-audit/
 └── install.sh                    # Installation script
 ```
 
-## 🔐 Security Checks Performed
+## Security Checks Performed
 
 ### SSH Configuration
-- ✓ Root login enabled/disabled
-- ✓ Password authentication enabled/disabled
-- ✓ Public key authentication enabled
-- ✓ Empty passwords permitted
-- ✓ SSH port configuration
-- ✓ Protocol version
+- Root login enabled/disabled
+- Password authentication enabled/disabled
+- Public key authentication enabled
+- Empty passwords permitted
+- SSH port configuration
+- Protocol version
 
 ### Login Analysis
-- ✓ Failed login attempt count
-- ✓ Unique IP addresses with failed attempts
-- ✓ Brute force detection
-- ✓ Top attacking IP addresses
+- Failed login attempt count
+- Unique IP addresses with failed attempts
+- Brute force detection
+- Top attacking IP addresses
 
 ### User & Permissions
-- ✓ Users with UID 0 (root)
-- ✓ Users without passwords
-- ✓ Sudo users enumeration
-- ✓ World-writable files detection
-- ✓ SUID binaries identification
-- ✓ /etc/passwd and /etc/shadow permissions
+- Users with UID 0 (root)
+- Users without passwords
+- Sudo users enumeration
+- World-writable files detection
+- SUID binaries identification
+- /etc/passwd and /etc/shadow permissions
 
 ### Firewall & Network
-- ✓ UFW status and configuration
-- ✓ Firewalld status and configuration
-- ✓ iptables rules count
-- ✓ Listening ports and services
-- ✓ Exposed/risky services detection
+- UFW status and configuration
+- Firewalld status and configuration
+- iptables rules count
+- Listening ports and services
+- Exposed/risky services detection
 
 ### Services
-- ✓ Running services enumeration
-- ✓ Risky service detection (telnet, ftp, etc.)
-- ✓ Service status verification
+- Running services enumeration
+- Risky service detection (telnet, ftp, etc.)
+- Service status verification
 
 ### System Hardening
-- ✓ Fail2ban installation and status
-- ✓ auditd (system audit daemon) status
-- ✓ SELinux/AppArmor status
-- ✓ Automatic updates configuration
-- ✓ Cron jobs enumeration
+- Fail2ban installation and status
+- auditd (system audit daemon) status
+- SELinux/AppArmor status
+- Automatic updates configuration
+- Cron jobs enumeration
 
-## 📈 Security Scoring
+## Security Scoring
 
 The tool generates a security score out of 100 based on:
 
@@ -258,7 +258,7 @@ The tool generates a security score out of 100 based on:
 - **D (60-69)**: Poor security
 - **F (<60)**: Critical security issues
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
 
@@ -279,11 +279,11 @@ python3 -m pytest tests/
 - Add type hints where possible
 - Write unit tests for new features
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🐛 Bug Reports
+## Bug Reports
 
 If you encounter any issues, please open an issue on GitHub with:
 - Linux distribution and version
@@ -291,23 +291,23 @@ If you encounter any issues, please open an issue on GitHub with:
 - Command executed
 - Error message/output
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This tool is for authorized security auditing purposes only. Unauthorized access to computer systems is illegal. Always obtain proper authorization before conducting security audits.
 
-## 👤 Author
+## Author
 
-**Shreyash-03**
+**JohnDoeShallLive**
 
-- GitHub: [@Shreyash-03](https://github.com/Shreyash-03)
+- GitHub: [@JohnDoeShallLive](https://github.com/JohnDoeShallLive)
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Inspired by industry-standard security auditing tools
 - Built for the Linux security community
 - Designed with simplicity and effectiveness in mind
 
-## 📞 Support
+## Support
 
 For questions and support:
 - Open an issue on GitHub
@@ -316,4 +316,4 @@ For questions and support:
 
 ---
 
-**Made with ❤️ for Linux Security Community**
+**Made with care for Linux Security Community**
